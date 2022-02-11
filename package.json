@@ -4,11 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "deploy": "vue-tsc --noEmit && vite build --base '/vue-ts/'",
+    "deploy": "vue-tsc --noEmit && vite build --base 'vue-ts'",
     "preview": "vite preview"
   },
   "dependencies": {
-    "marked": "4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",

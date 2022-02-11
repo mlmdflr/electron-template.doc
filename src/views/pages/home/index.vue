@@ -1,35 +1,38 @@
 <script setup lang="ts">
 import { ref, defineComponent, Ref, onMounted } from "vue"
-import { NMenu, NLayout, NLayoutSider, NLayoutHeader } from "naive-ui"
+import { NMenu, NLayout, NLayoutSider, NAffix } from "naive-ui"
 import { menuOption } from "@/cfg"
-import md from "./md/README.md"
+import introduce from "@/assets/md/introduce.md"
 
+
+let md = ref(introduce)
 
 onMounted(async () => {
-    console.log(md);
-
-
+    console.log(introduce);
 })
 
 </script>
 <style lang="scss">
 </style>
 <template>
-    <n-layout>
-        <n-layout-header bordered>
-            <div style="height: 100%; display: flex;justify-content: center;">
-                <h1>xps-electron-vue-template</h1>
-            </div>
-        </n-layout-header>
+    <div>
         <n-layout has-sider>
-            <n-layout-sider bordered :native-scrollbar="false">
-                <n-menu :default-expand-all="true" :options="menuOption" />
+            <n-layout-sider content-style="padding: 24px;">
+                <n-affix :trigger-top="10">
+                    <h1>xps-electron-vue-template</h1>
+                    <n-menu
+                        dropdown-placement="right-start"
+                        :default-expand-all="true"
+                        :options="menuOption"
+                    />
+                </n-affix>
             </n-layout-sider>
             <n-layout>
-                <div style="height: 100%; display: flex;justify-content: center;">
+                <div style="display: flex;justify-content: center;">
                     <md></md>
                 </div>
             </n-layout>
         </n-layout>
-    </n-layout>
+        <div></div>
+    </div>
 </template>
