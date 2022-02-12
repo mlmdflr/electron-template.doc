@@ -1,4 +1,5 @@
 <template>
+  <n-message-provider placement="top" :max="3">
     <router-view v-slot="{ Component, route }">
       <transition :name="route.meta.transition || 'fade'" mode="out-in">
         <keep-alive
@@ -11,9 +12,11 @@
         </keep-alive>
       </transition>
     </router-view>
+  </n-message-provider>
 </template>
 <script setup lang="ts">
 import { keepAliveData } from '@/store';
+import { NMessageProvider } from 'naive-ui';
 </script>
 <style lang="scss">
 </style>

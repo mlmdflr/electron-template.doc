@@ -29,7 +29,7 @@
 
 ### 主分支
 
-- ts
+- js/ts
 - electron
 - sass
 - webpack
