@@ -2,7 +2,21 @@
 
 [主分支 @youli](https://github.com/youliso/electron-template)
 
-[vue @mlmdflr](https://github.com/mlmdflr/xps-electron-vue-template)
+[vue分支 @mlmdflr](https://github.com/mlmdflr/xps-electron-vue-template)
+
+
+
+## 开发相关文档
+
+[nodejs](https://nodejs.org)
+
+[electronjs](https://www.electronjs.org/)
+
+[mdn](https://developer.mozilla.org/)
+
+[ts](https://www.tslang.cn/)
+
+[vuejs](https://v3.cn.vuejs.org/)
 
 ## 异同
 
@@ -63,6 +77,7 @@
 ├── scripts 打包的方法 、本地调试等
 ├── src
 │   ├── cfg 本地配置和 请求配置之类
+│   ├── assets 静态资源
 │   ├── utils 一些依赖方法(主、渲染可通用)
 │   ├── main 主进程模块
 │   └── renderer 渲染进程模块

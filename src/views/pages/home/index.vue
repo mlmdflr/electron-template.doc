@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref, defineAsyncComponent, defineComponent, watch, shallowRef, render } from "vue"
+import { ref, defineAsyncComponent, defineComponent, watch, shallowRef } from "vue"
 import { NMenu, NLayout, NLayoutSider, NAffix, useMessage } from "naive-ui"
 import { menuOption } from "@/cfg"
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute()
+const toRoute = useRouter()
 
 const mds: string[] = []
 
@@ -30,7 +31,7 @@ let mdChange = (pkey: string) => {
     try {
         const keys = Object.keys(modules)
         if (!pkey) throw new Error('md config error')
-        if (!mds.includes(pkey) || mds.length === 0)throw new Error('md not found')
+        if (!mds.includes(pkey) || mds.length === 0) throw new Error('md not found')
         if (!keys.includes(`/src/assets/md/${pkey}.md`)) throw new Error('md not found')
         else {
             Md.value = defineAsyncComponent(modules[`/src/assets/md/${pkey}.md`])
@@ -48,8 +49,7 @@ let mdChange = (pkey: string) => {
 mdChange(route.params.key as string)
 
 let menuUpdate = (key: string) => {
-    menuKey.value = key
-    mdChange(key)
+    toRoute.push({ name: 'Mains', params: { key } })
 }
 
 </script>

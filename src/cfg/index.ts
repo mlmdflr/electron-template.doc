@@ -10,8 +10,11 @@ export const menuOption = [
                 key: 'instConfig',
                 label: '安装运行打包',
             }, {
-                key: 'relyFolder',
-                label: '依赖文件夹',
+                key: 'mirrorAss',
+                label: '镜像配置',
+            }, {
+                key: 'feature',
+                label: '一些说明',
             },
         ]
     }
