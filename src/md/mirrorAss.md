@@ -12,18 +12,18 @@ npm config set registry https://registry.npmmirror.com
 
 ```shell
 npm config set electron_mirror https://cdn.npmmirror.com/binaries/electron/v
-npm config set electron_custom_dir '{{ version }}'
+npm config set electron_custom_dir '{ version }'
 npm config set electron_builder_binaries_mirror https://npmmirror.com/mirrors/electron-builder-binaries/
 ```
 
-> 除shell命令窗口外 {{ version }} 可以不添加单引号或双引号
+> 除shell命令窗口外 { version } 可以不添加单引号或双引号
 
 或者直接运行 `npm config edit` 打开 `npm` 配置文件在空白处添加
 
 ```
 registry=https://registry.npmmirror.com
 electron_mirror=https://cdn.npmmirror.com/binaries/electron/v
-electron_custom_dir='{{ version }}'
+electron_custom_dir='{ version }'
 electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
 ```
 

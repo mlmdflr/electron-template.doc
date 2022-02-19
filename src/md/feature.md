@@ -48,5 +48,4 @@
 
 > `12354891`
 
-### [此文档项目地址](https://github.com/mlmdflr/electron-template.doc)
-
+### [此文档项目地址](https://github.com/mlmdflr/xps-doc-template/)

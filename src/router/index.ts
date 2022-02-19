@@ -1,10 +1,20 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import pageRoute from '@/router/modular/page';
+import {defaultKey} from "@/cfg/menuCfg";
 
 const Router = createRouter({
   history: createWebHashHistory(),
-  routes: [...pageRoute]
+  routes: [
+    {
+      path: '/',
+      name: 'Main',
+      redirect: '/' + defaultKey
+    },
+    {
+      path: '/:key',
+      name: 'Mains',
+      component: () => import('@/views/index.vue')
+    },
+  ]
 });
-
 
 export default Router;
