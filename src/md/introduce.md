@@ -4,6 +4,7 @@
 
 [vue分支 @mlmdflr](https://github.com/mlmdflr/xps-electron-vue-template)
 
+[react分支 @TaiAiAc](https://github.com/TaiAiAc/electron-react-template)
 
 
 ## 开发相关文档
@@ -54,7 +55,9 @@
 - vue3
 - vue-router
 
-
+### react分支
+- 主分支的技术栈
+- react
 
 ## 目录结构
 
