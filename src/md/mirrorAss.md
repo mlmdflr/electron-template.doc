@@ -183,8 +183,7 @@ Global.getResourcesPath('platform')
 
 
 
-### net.json(vue分支无此配置)
-
+### net.json(vue分分支无此配置)
 ```json
 {
   // 超时时间
@@ -200,7 +199,7 @@ Global.getResourcesPath('platform')
 
 
 
-### snowflake.json(主分支无此配置)
+### snowflake.json(vue分支配置)
 
 ```json
 {
