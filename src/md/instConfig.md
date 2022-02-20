@@ -22,6 +22,8 @@
 git clone git@github.com:youliso/electron-template.git
 #vue分支
 git clone git@github.com:mlmdflr/xps-electron-vue-template.git
+#react分支
+git clone git@github.com:TaiAiAc/electron-react-template.git
 ```
 
 
