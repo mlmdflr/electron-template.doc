@@ -22,8 +22,6 @@
 git clone git@github.com:youliso/electron-template.git
 #vue分支
 git clone git@github.com:mlmdflr/xps-electron-vue-template.git
-#react分支
-git clone git@github.com:TaiAiAc/electron-react-template.git
 ```
 
 
@@ -59,11 +57,15 @@ npm i
 #or
 [pnpm|yarn|npm] build
 >> Which platform is you want to build?
->> optional：win,win32,win64,winp,winp32,winp64,darwin,mac,linux    q exit
-<< win32
+>> optional：win,win32,win64,winp,winp32,winp64,darwin,mac,linux  or  q (exit)  |  [-notp]
+<< win32 -notp
 ```
 
+>  [-notp]
+>
+>  >可选项,带上则不进行 asar 保护
+>
 >  `>>`  输出
->  
+>
 >  `<<`  输入
 

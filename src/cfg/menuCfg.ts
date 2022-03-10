@@ -13,11 +13,24 @@ export const menu: MenuCfg = {
                     label: '安装运行打包',
                 }, {
                     key: 'mirrorAss',
-                    label: '镜像配置',
+                    label: '镜像',
                 }, {
+                    key: 'inCfg',
+                    label: '配置',
+                },
+                {
+                    key: 'script',
+                    label: '脚本'
+                }
+            ]
+        }, {
+            key: 'last',
+            label: '最后',
+            children: [
+                {
                     key: 'feature',
                     label: '一些说明',
-                },
+                }
             ]
         }
     ]

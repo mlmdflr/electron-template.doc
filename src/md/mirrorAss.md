@@ -2,6 +2,8 @@
 
 限于国内网络环境经常遇到依赖拉取异常 影响着 `Install` 和 `build` 等操作,则需要配置镜像
 
+ - `如果有魔法手段,则无需配置镜像`
+
 ### 仓库镜像
 
 ```shell
@@ -11,23 +13,19 @@ npm config set registry https://registry.npmmirror.com
 ### electron镜像
 
 ```shell
-npm config set electron_mirror https://cdn.npmmirror.com/binaries/electron/v
-npm config set electron_custom_dir '{ version }'
+npm config set electron_mirror https://cdn.npmmirror.com/binaries/electron/
 npm config set electron_builder_binaries_mirror https://npmmirror.com/mirrors/electron-builder-binaries/
 ```
 
-> 除shell命令窗口外 { version } 可以不添加单引号或双引号
-
 或者直接运行 `npm config edit` 打开 `npm` 配置文件在空白处添加
 
-```
+```shell
 registry=https://registry.npmmirror.com
-electron_mirror=https://cdn.npmmirror.com/binaries/electron/v
-electron_custom_dir='{ version }'
+electron_mirror=https://cdn.npmmirror.com/binaries/electron/
 electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-binaries/
 ```
 
-> 添加后查看是否有重复添加
+> 添加后查看是否有重复添加,然后关闭该窗口，重启命令行，删除node_modules文件夹，并重新安装依赖即可
 
 
 
@@ -45,7 +43,7 @@ electron_builder_binaries_mirror=https://npmmirror.com/mirrors/electron-builder-
 import ico from '@/assets/icon/tray.ico';
 ```
 
-
+&nbsp;
 
 ### inside(resources/inside)
 
@@ -57,15 +55,16 @@ import ico from '@/assets/icon/tray.ico';
 
 ```ts
 import Global from './modular/global';
-
-
 Global.getResourcesPath('inside') 
 
 // 开发环境时 >> 项目路径\resources\inside
 // 生产环境时 >> 安装后 app.asar 的虚拟路径
 ```
 
+#### 注意
+`inside` 打包后的虚拟路径只可读不可写
 
+&nbsp;
 
 
 ### extern(resources/extern)
@@ -78,15 +77,13 @@ Global.getResourcesPath('inside')
 
 ```ts
 import Global from './modular/global';
-
-
 Global.getResourcesPath('extern') 
 
 // 开发环境时 >> 项目路径\resources\extern
 // 生产环境时 >> 安装路径\resources\extern
 ```
 
-
+&nbsp;
 
 ### root(resources/root)
 
@@ -100,15 +97,13 @@ Global.getResourcesPath('extern')
 
 ```ts
 import Global from './modular/global';
-
-
 Global.getResourcesPath('root') 
 
 // 开发环境时 >> 项目路径\resources\root
 // 生产环境时 >> 安装路径\
 ```
 
-
+&nbsp;
 
 ### platform(resources/platform)
 
@@ -128,8 +123,6 @@ Global.getResourcesPath('root')
 
 ```ts
 import Global from './modular/global';
-
-
 Global.getResourcesPath('platform') 
 // win 平台
 // 开发环境时 >> 项目路径\resources\platform\win32(与当前系统平台同名的文件夹)
@@ -183,7 +176,8 @@ Global.getResourcesPath('platform')
 
 
 
-### net.json(vue分分支无此配置)
+### net.json(vue分支无此配置)
+
 ```json
 {
   // 超时时间
@@ -199,7 +193,7 @@ Global.getResourcesPath('platform')
 
 
 
-### snowflake.json(vue分支配置)
+### snowflake.json(主分支无此配置)
 
 ```json
 {

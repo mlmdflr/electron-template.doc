@@ -1,11 +1,12 @@
 ## 一个基于 `electron` 多窗口模式的模板
 
+文档有时候存在一些滞后性仅供参考,实际以代码为准
+
 [主分支 @youli](https://github.com/youliso/electron-template)
 
 [vue分支 @mlmdflr](https://github.com/mlmdflr/xps-electron-vue-template)
 
 [react分支 @TaiAiAc](https://github.com/TaiAiAc/electron-react-template)
-
 
 ## 开发相关文档
 
@@ -46,18 +47,17 @@
 
 - js/ts
 - electron
-- sass
-- webpack
+- `CSS-in-JS`
+- vite
 
 ### vue分支
 
 - 主分支的技术栈
+- `sass`
 - vue3
 - vue-router
 
-### react分支
-- 主分支的技术栈
-- react
+
 
 ## 目录结构
 

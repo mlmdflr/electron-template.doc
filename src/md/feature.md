@@ -2,9 +2,9 @@
 
 > 虽然已经有许多优秀成熟的 electron 开发的模版框架 例如
 >
-> ​	天姐的 [ `electron-vue-template` ](https://github.com/umbrella22/electron-vue-template)
+> ​	天姐的 [`electron-vue-template`](https://github.com/umbrella22/electron-vue-template)
 >
-> 但是由于侧重点不同,很少有框架能像我们框架对多窗口管理如此细致
+> 我们这个架子的侧重点在于多窗体管理,其次就是激进
 
 
 
@@ -16,17 +16,7 @@
 >
 > 两个项目最大的不同就是渲染进程 , 原生实现和vue 
 >
-> 如果使用`react` 可以使用`TaiAiAc` 大佬维护得 `react` 分支
->
 > ~~ps: 我是没礼貌的芬兰人~~
-
-
-
-### 题外话
-
-> 觉得这份文档有些许多余 , 直接看 `youli酱 ` 的代码更好
->
-> ~~他的代码像诗一样优雅,我的 TypeScript 就是看他代码学的!~~ 
 
 
 
